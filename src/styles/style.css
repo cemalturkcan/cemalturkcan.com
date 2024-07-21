@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('@/assets/fonts/helveticanowdisplay-light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('@/assets/fonts/helveticanowdisplay-regular.woff2') format('woff2');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('@/assets/fonts/helveticanowdisplay-medium.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Helvetica';
+    src: url('@/assets/fonts/helveticanowdisplay-bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+
+:root{
+    --primary: #000000;
+    --text-white: #ffffff;
+
+    /*1rem == 10px*/
+    --font-size: 62.5%;
+
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--primary);
+    color: var(--text-white);
+    line-height: 1.6;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 1.5rem;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

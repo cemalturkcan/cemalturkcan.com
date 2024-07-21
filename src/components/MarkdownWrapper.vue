@@ -1,8 +1,11 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <RouterView />
+  <div v-bind="$attrs">
+    <slot />
+  </div>
 </template>
 
 <style scoped>

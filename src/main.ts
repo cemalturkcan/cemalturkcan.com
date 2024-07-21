@@ -1,14 +1,18 @@
 import { ViteSSG } from 'vite-ssg'
-import App from './App.vue'
-import './style.css'
-import { routes } from 'vue-router/auto-routes'
+import './styles/style.css'
+import './styles/markdown.css'
+import { setupLayouts } from 'virtual:generated-layouts'
 
+import { routes } from 'vue-router/auto-routes'
+import App from './App.vue'
 
 export const createApp = ViteSSG(
-    App,
-    { routes },
-    ({  }) => {
-    },
+  App,
+  {
+    routes: setupLayouts(routes),
+
+  },
+  ({ }) => {
+  },
+
 )
-
-
