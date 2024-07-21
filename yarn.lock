@@ -833,6 +833,11 @@
     hookable "^5.5.3"
     unhead "1.9.16"
 
+"@unocss/reset@^0.61.5":
+  version "0.61.5"
+  resolved "https://registry.yarnpkg.com/@unocss/reset/-/reset-0.61.5.tgz#359e30fe2b69732ebe424c7c3f9421c27c92395e"
+  integrity sha512-5FKNsHnke9J1Z0T4prOZn9hkWh86c6Px+Oh3xf8mDd6dDw8CjzYMRxZEKti0gt13NcsO29G1vLGM7UjG1sCamg==
+
 "@vitejs/plugin-vue@^5.0.5":
   version "5.0.5"
   resolved "https://registry.npmjs.org/@vitejs/plugin-vue/-/plugin-vue-5.0.5.tgz"

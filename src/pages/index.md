@@ -3,9 +3,9 @@ title: Cemal Türkcan
 description: Cemal Turkcan's Portfolio
 
 name: Cemal
-surname: Turkcan
+surname: Türkcan
 personalTitle: Full Stack Developer
-extraDescription: My name is Cemal.
+personalDescription: My name is Cemal.
   I work as a full stack developer and primarily develop web applications.
 
 projects:

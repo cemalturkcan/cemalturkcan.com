@@ -48,11 +48,8 @@ export default defineConfig({
       markdownItOptions: {
         quotes: '""\'\'',
       },
-      wrapperComponent() {
-        return 'MarkdownWrapper'
-      },
       wrapperClasses() {
-        return ''
+        return 'content'
       },
     }),
     Layouts(),

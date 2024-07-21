@@ -8,7 +8,9 @@
     "moduleDetection": "force",
     "useDefineForClassFields": true,
     "module": "ESNext",
-
+    "paths": {
+      "@/*": ["src/*"]
+    },
     /* Bundler mode */
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
