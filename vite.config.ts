@@ -1,4 +1,6 @@
 import path from 'node:path'
+import fs from 'fs-extra'
+import matter from 'gray-matter'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 import Markdown from 'unplugin-vue-markdown/vite'
@@ -18,7 +20,20 @@ export default defineConfig({
       extensions: ['.vue', '.md'],
       routesFolder: 'src/pages',
       logs: true,
+      extendRoute(route) {
+        const path = route.components.get('default')
+        if (!path)
+          return
+
+        if (!path.includes('projects.md') && path.endsWith('.md')) {
+          const { data } = matter(fs.readFileSync(path, 'utf-8'))
+          route.addToMeta({
+            frontmatter: data,
+          })
+        }
+      },
     }),
+
     Vue({
       include: [/\.vue$/, /\.md$/],
       script: {

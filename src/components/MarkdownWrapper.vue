@@ -1,9 +1,14 @@
 <script setup lang="ts">
-
+const { frontmatter } = defineProps({
+  frontmatter: {
+    type: Object,
+    required: true,
+  },
+})
 </script>
 
 <template>
-  <div v-bind="$attrs">
+  <div>
     <slot />
   </div>
 </template>

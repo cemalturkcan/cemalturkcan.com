@@ -10,6 +10,9 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^11.2.0",
+    "gray-matter": "^4.0.3",
     "unplugin-vue-markdown": "^0.26.2",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0"
