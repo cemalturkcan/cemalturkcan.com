@@ -9,9 +9,7 @@ export const createApp = ViteSSG(
   App,
   {
     routes: setupLayouts(routes),
-
   },
   ({ }) => {
   },
-
 )

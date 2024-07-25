@@ -28,11 +28,14 @@ const { frontmatter } = defineProps({
         <p class="description">
           {{ frontmatter.personalDescription }}
         </p>
+        <p class="description">
+          {{ frontmatter.personalDescription2 }}
+        </p>
       </div>
     </section>
     <NavBarHome />
   </div>
-  <ProejctListHome />
+  <ProejctListHome :projects="frontmatter.projects" />
 </template>
 
 <style>
@@ -54,7 +57,7 @@ h2 {
 }
 
 .description{
-  font-size: var(--font-size-6);
+  font-size: var(--font-size-8);
   font-weight: 700;
 }
 
@@ -71,5 +74,6 @@ h2 {
   width: 100%;
   grid-template-columns: 2fr 1fr;
   height: 100vh;
+  padding: var(--spacing-18) var(--spacing-36);
 }
 </style>

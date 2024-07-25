@@ -6,12 +6,14 @@ name: Cemal
 surname: Türkcan
 personalTitle: Full Stack Developer
 personalDescription: My name is Cemal.
-  I work as a full stack developer and primarily develop web applications.
+personalDescription2:  I work as a full stack developer and primarily develop web applications.
+
 
 projects:
-  Full Time:
+  Full Time Experiences:
     - name: Venhancer
-      description: Full Stack Developer
+      description: June 2023 - September 2023 Full Stack Developer
+
 
 ---
 

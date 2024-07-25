@@ -28,7 +28,7 @@
 <style scoped>
 ul {
   display: flex;
-  gap: var(--spacing-12);
+  gap: var(--spacing-6);
   font-size: var(--font-size-9);
   font-weight: 500;
 }
