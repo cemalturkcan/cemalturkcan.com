@@ -62,4 +62,23 @@ h3 {
   font-size: var(--font-size-8);
   font-weight: 500;
 }
+
+@media (max-width: 1366px) {
+  .project-name {
+    font-size: var(--font-size-32);
+  }
+
+  .project-desc{
+    font-size: var(--font-size-7);
+  }
+}
+@media (max-width: 1152px) {
+  .project-name {
+    font-size: var(--font-size-26);
+  }
+
+  .project-desc{
+    font-size: var(--font-size-6);
+  }
+}
 </style>

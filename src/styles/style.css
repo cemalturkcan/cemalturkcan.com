@@ -34,12 +34,18 @@
     --font-size-7: 1.4rem;
     --font-size-8: 1.6rem;
     --font-size-9: 1.8rem;
+    --font-size-12: 2.4rem;
     --font-size-14: 2.8rem;
+    --font-size-26: 5.2rem;
+    --font-size-32: 6.4rem;
     --font-size-36: 7.2rem;
+    --font-size-43: 8.6rem;
+    --font-size-48: 9.6rem;
     --font-size-64: 12.8rem;
 
     --spacing-3: 0.6rem;
     --spacing-6: 1.2rem;
+    --spacing-12: 2.4rem;
     --spacing-16: 3.2rem;
     --spacing-18: 3.6rem;
     --spacing-36: 7.2rem;

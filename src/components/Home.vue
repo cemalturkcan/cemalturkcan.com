@@ -15,11 +15,11 @@ const { frontmatter } = defineProps({
     class="left"
   >
     <section class="information">
-      <h1>
+      <h1 class="name-surname">
         {{ frontmatter.name }}
-        <br>
-        &#8203
-        {{ frontmatter.surname }}
+        <span class="name-surname-divider">
+          {{ frontmatter.surname }}
+        </span>
       </h1>
       <div>
         <h2>
@@ -47,7 +47,7 @@ const { frontmatter } = defineProps({
 }
 
 h1 {
-  font-size: 9vw;
+  font-size: var(--font-size-64);
   line-height: 0.8;
   font-weight: 700;
 }
@@ -66,6 +66,33 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
 }
+.name-surname {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.name-surname-divider {
+  margin-left: calc(1ch / 2);
+}
+
+@media (max-width: 1366px) {
+  h1 {
+    font-size: var(--font-size-48);
+  }
+}
+
+@media (max-width: 1152px) {
+  h1 {
+    font-size: var(--font-size-43);
+  }
+  h2{
+    font-size: var(--font-size-12);
+  }
+  .description{
+    font-size: var(--font-size-7);
+  }
+
+}
 </style>
 
 <style>
@@ -74,6 +101,21 @@ h2 {
   width: 100%;
   grid-template-columns: 2fr 1fr;
   height: 100vh;
+  gap: var(--spacing-12);
   padding: var(--spacing-18) var(--spacing-36);
+}
+
+@media (max-width: 1366px) {
+  .content{
+    padding: var(--spacing-12) var(--spacing-16);
+    gap: var(--spacing-18);
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@media (max-width: 1152px) {
+  .content{
+
+  }
 }
 </style>
