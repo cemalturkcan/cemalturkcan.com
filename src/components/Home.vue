@@ -17,6 +17,7 @@ function resizeColumnWidth() {
   if (contentElement) {
     const gridTemplateColumns = getComputedStyle(contentElement).gridTemplateColumns
     const columns = gridTemplateColumns.split(' ')
+    console.log(columns)
     if (columns.length === 2) {
       columnWidth.value = columns[1]
     }
@@ -129,7 +130,7 @@ h2 {
   display: grid;
   width: 100%;
   grid-template-columns: 2fr 1fr;
-  height: 100vh;
+  height: 100dvh;
   gap: var(--spacing-12);
   padding: var(--spacing-18) var(--spacing-36);
   overflow-y: hidden;
