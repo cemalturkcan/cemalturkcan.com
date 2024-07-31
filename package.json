@@ -16,6 +16,7 @@
     "gray-matter": "^4.0.3",
     "unplugin-vue-markdown": "^0.26.2",
     "vue": "^3.4.31",
+    "vue-gtag": "^2.0.1",
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
