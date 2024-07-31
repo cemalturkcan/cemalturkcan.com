@@ -3,13 +3,17 @@ import type { Project } from '@/types.ts'
 
 const { projects } = defineProps<{
   projects: Record<string, Project[]>
+  columnWidth: string
 }>()
 </script>
 
 <template>
-  <section class="projects">
+  <section
+    class="projects-container"
+  >
     <ul
       class="project-list"
+      :style="{ width: columnWidth }"
     >
       <li
         v-for="project, idx in Object.keys(projects)"
@@ -37,12 +41,19 @@ const { projects } = defineProps<{
 </template>
 
 <style scoped>
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.projects-container{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: var(--spacing-100);
+  padding-right: var(--spacing-18);
+  overflow-y: auto;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   text-align: right;
 }
+
 .project-item {
   display: flex;
   flex-direction: column;
@@ -54,31 +65,53 @@ h3 {
   margin-bottom: 0.5rem;
 }
 .project-name {
-  font-size: var(--font-size-36);
+  font-size: var(--font-size-23);
   font-weight: 700;
   line-height: 1;
 }
 .project-desc{
-  font-size: var(--font-size-8);
+  font-size: var(--font-size-6);
   font-weight: 500;
 }
 
 @media (max-width: 1366px) {
-  .project-name {
-    font-size: var(--font-size-32);
+  .projects-container{
+    padding-right: var(--spacing-16);
   }
 
-  .project-desc{
+  h3 {
     font-size: var(--font-size-7);
   }
-}
-@media (max-width: 1152px) {
+
   .project-name {
-    font-size: var(--font-size-26);
+    font-size: var(--font-size-22);
   }
 
   .project-desc{
     font-size: var(--font-size-6);
   }
+}
+@media (max-width: 1152px) {
+  h3 {
+    font-size: var(--font-size-6);
+  }
+
+  .project-name {
+    font-size: var(--font-size-21);
+  }
+
+  .project-desc{
+    font-size: var(--font-size-5);
+  }
+}
+@media (max-width: 762px) {
+  .projects-container{
+    padding-right: var(--spacing-6);
+  }
+
+  .project-name {
+    font-size: var(--font-size-16);
+  }
+
 }
 </style>

@@ -32,4 +32,18 @@ ul {
   font-size: var(--font-size-9);
   font-weight: 500;
 }
+@media (max-width: 1024px) {
+  nav {
+    position: fixed;
+    top: 50%;
+    left: var(--spacing-16);
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 762px) {
+  nav {
+    left: var(--spacing-6);
+  }
+}
 </style>

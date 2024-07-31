@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref } from 'vue'
 import NavBarHome from '@/components/NavBarHome.vue'
 import ProejctListHome from '@/components/ProejctListHome.vue'
 
@@ -7,6 +8,24 @@ const { frontmatter } = defineProps({
     type: Object,
     required: true,
   },
+})
+
+const columnWidth = ref('0px')
+
+function resizeColumnWidth() {
+  const contentElement = document.querySelector('.content')
+  if (contentElement) {
+    const gridTemplateColumns = getComputedStyle(contentElement).gridTemplateColumns
+    const columns = gridTemplateColumns.split(' ')
+    if (columns.length === 2) {
+      columnWidth.value = columns[1]
+    }
+  }
+}
+
+onMounted(() => {
+  resizeColumnWidth()
+  window.addEventListener('resize', resizeColumnWidth)
 })
 </script>
 
@@ -35,7 +54,7 @@ const { frontmatter } = defineProps({
     </section>
     <NavBarHome />
   </div>
-  <ProejctListHome :projects="frontmatter.projects" />
+  <ProejctListHome :projects="frontmatter.projects" :column-width="columnWidth" />
 </template>
 
 <style>
@@ -52,7 +71,7 @@ h1 {
   font-weight: 700;
 }
 h2 {
-  font-size: var(--font-size-14);
+  font-size: var(--font-size-15);
   font-weight: 700;
 }
 
@@ -83,10 +102,20 @@ h2 {
 
 @media (max-width: 1152px) {
   h1 {
-    font-size: var(--font-size-43);
   }
-  h2{
-    font-size: var(--font-size-12);
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: var(--font-size-36);
+  }
+}
+@media (max-width: 762px) {
+  h1 {
+    font-size: var(--font-size-31);
+  }
+  h2 {
+    font-size: var(--font-size-13);
   }
   .description{
     font-size: var(--font-size-7);
@@ -103,19 +132,26 @@ h2 {
   height: 100vh;
   gap: var(--spacing-12);
   padding: var(--spacing-18) var(--spacing-36);
+  overflow-y: hidden;
 }
 
 @media (max-width: 1366px) {
   .content{
     padding: var(--spacing-12) var(--spacing-16);
     gap: var(--spacing-18);
-    grid-template-columns: 2fr 1fr;
   }
 }
 
 @media (max-width: 1152px) {
-  .content{
 
+}
+
+@media (max-width: 1024px) {
+}
+@media (max-width: 762px) {
+  .content{
+    grid-template-columns: 1fr 1fr;
+    padding: var(--spacing-12) var(--spacing-6);
   }
 }
 </style>
