@@ -48,7 +48,7 @@ const { projects } = defineProps<{
   padding-top: var(--spacing-100);
   padding-right: var(--spacing-18);
   overflow-y: auto;
-  height: 100vh;
+  height: 100dvh;
   scrollbar-width: none;
   -ms-overflow-style: none;
   text-align: right;
