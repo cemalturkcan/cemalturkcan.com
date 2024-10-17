@@ -46,4 +46,19 @@ ul {
     left: var(--spacing-6);
   }
 }
+
+@media (max-width: 550px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    padding: var(--spacing-6)
+  }
+  ul {
+    justify-content: flex-end;
+  }
+}
 </style>

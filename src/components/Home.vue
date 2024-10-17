@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
 import NavBarHome from '@/components/NavBarHome.vue'
 import ProejctListHome from '@/components/ProejctListHome.vue'
 
@@ -8,25 +7,6 @@ const { frontmatter } = defineProps({
     type: Object,
     required: true,
   },
-})
-
-const columnWidth = ref('0px')
-
-function resizeColumnWidth() {
-  const contentElement = document.querySelector('.content')
-  if (contentElement) {
-    const gridTemplateColumns = getComputedStyle(contentElement).gridTemplateColumns
-    const columns = gridTemplateColumns.split(' ')
-    console.log(columns)
-    if (columns.length === 2) {
-      columnWidth.value = columns[1]
-    }
-  }
-}
-
-onMounted(() => {
-  resizeColumnWidth()
-  window.addEventListener('resize', resizeColumnWidth)
 })
 </script>
 
@@ -41,7 +21,7 @@ onMounted(() => {
           {{ frontmatter.surname }}
         </span>
       </h1>
-      <div>
+      <div class="description">
         <h2>
           {{ frontmatter.personalTitle }}
         </h2>
@@ -55,7 +35,7 @@ onMounted(() => {
     </section>
     <NavBarHome />
   </div>
-  <ProejctListHome :projects="frontmatter.projects" :column-width="columnWidth" />
+  <ProejctListHome :projects="frontmatter.projects" />
 </template>
 
 <style>
@@ -102,8 +82,7 @@ h2 {
 }
 
 @media (max-width: 1152px) {
-  h1 {
-  }
+
 }
 
 @media (max-width: 1024px) {
@@ -121,7 +100,19 @@ h2 {
   .description{
     font-size: var(--font-size-7);
   }
+}
 
+@media (max-width: 550px) {
+  .description{
+    text-align: right;
+  }
+
+  .name-surname{
+    margin-top: var(--spacing-18);
+  }
+  .information{
+    justify-content: space-around;
+  }
 }
 </style>
 
@@ -154,5 +145,14 @@ h2 {
     grid-template-columns: 1fr 1fr;
     padding: var(--spacing-12) var(--spacing-6);
   }
+}
+
+@media (max-width: 550px) {
+  .content{
+    grid-template-columns: 1fr;
+    grid-template-rows: 5fr 4fr;
+    padding-bottom: 0;
+  }
+
 }
 </style>

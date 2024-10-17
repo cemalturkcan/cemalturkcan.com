@@ -3,7 +3,6 @@ import type { Project } from '@/types.ts'
 
 const { projects } = defineProps<{
   projects: Record<string, Project[]>
-  columnWidth: string
 }>()
 </script>
 
@@ -13,11 +12,10 @@ const { projects } = defineProps<{
   >
     <ul
       class="project-list"
-      :style="{ width: columnWidth }"
     >
       <li
-        v-for="project, idx in Object.keys(projects)"
-        :key="idx"
+        v-for="(project, id) in Object.keys(projects)"
+        :key="id"
         class="project"
       >
         <h3>
@@ -27,7 +25,7 @@ const { projects } = defineProps<{
           class="project-items"
         >
           <li
-            v-for="item, idx in projects[project]"
+            v-for="(item, idx) in projects[project]"
             :key="idx"
             class="project-item"
           >
@@ -52,6 +50,10 @@ const { projects } = defineProps<{
   scrollbar-width: none;
   -ms-overflow-style: none;
   text-align: right;
+}
+
+.project-list{
+  margin-bottom: var(--spacing-12);
 }
 
 .project-item {
@@ -112,6 +114,17 @@ h3 {
   .project-name {
     font-size: var(--font-size-16);
   }
+}
 
+@media (max-width: 550px) {
+  .projects-container{
+    position: relative;
+    text-align: left;
+    padding-top: 0;
+    height: auto;
+  }
+  .project-list{
+    margin-bottom: 0;
+  }
 }
 </style>
