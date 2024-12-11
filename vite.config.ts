@@ -7,6 +7,7 @@ import Markdown from 'unplugin-vue-markdown/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import Layouts from 'vite-plugin-vue-layouts'
 import Components from 'unplugin-vue-components/vite'
+import glsl from 'vite-plugin-glsl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -16,6 +17,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    glsl(),
     VueRouter({
       extensions: ['.vue', '.md'],
       routesFolder: 'src/pages',

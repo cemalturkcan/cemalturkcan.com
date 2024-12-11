@@ -13,5 +13,7 @@ declare module 'vue' {
     ProejctListHome: typeof import('./src/components/ProejctListHome.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Shader: typeof import('./src/components/Shader.vue')['default']
+    ShaderContainer: typeof import('./src/components/ShaderContainer.vue')['default']
   }
 }
