@@ -10,9 +10,8 @@ uniform sampler2D iChannel0;
 uniform vec4      iDate;
 uniform float     iSampleRate;
 
-#define NUM_LAYERS 3.
+#define NUM_LAYERS 4.
 
-// Optimized rotation - precompute sin/cos once
 mat2 Rot(float a) {
     float s = sin(a);
     float c = cos(a);
@@ -34,7 +33,6 @@ float Star(vec2 uv, float flare) {
     return m;
 }
 
-// Optimized hash with fewer operations but same distribution
 float Hash21(vec2 p) {
     p = fract(p*vec2(424.34,342.21));
     p += dot(p, p+34.32);
@@ -43,7 +41,7 @@ float Hash21(vec2 p) {
 
 vec3 StarLayer(vec2 uv) {
     vec3 col = vec3(0);
-    uv *= .2;
+    uv *= .04;
     vec2 gv = fract(uv)-.5;
     vec2 id = floor(uv);
 
@@ -73,7 +71,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float t = iTime*.02;
 
     uv += -M*3.;
-    uv *= 3.;
+    uv *= 2.;
 
     // Single rotation calculation
     mat2 rot = Rot(t+length(uv));
@@ -89,7 +87,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     }
 
     fragColor = vec4(col,1.0);
-    fragColor.a = .8;
+    fragColor.a = .3;
 }
 
 void main() {

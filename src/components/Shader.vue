@@ -8,7 +8,7 @@ import fragmentShader from '@/glsl/fragment.glsl'
 const { onBeforeRender } = useLoop()
 const mesh = shallowRef<any>(null)
 
-const resolutionScale = 0.3
+const resolutionScale = 1
 
 const uniforms = ref({
   iTime: { value: 0.0 },
@@ -26,14 +26,14 @@ onBeforeRender(({ elapsed }) => {
   if (delta < 1000 / targetFPS)
     return
   lastFrameTime = now
-  uniforms.value.iTime.value = elapsed * 0.1
+  uniforms.value.iTime.value = elapsed * 1
 })
 </script>
 
 <template>
   <TresPerspectiveCamera :position="[0, 0, 1]" :near="0.1" :far="1000" />
   <TresMesh ref="mesh">
-    <PlaneGeometry :args="[2, 2]" />
+    <PlaneGeometry :args="[3, 3]" />
     <TresShaderMaterial
       :uniforms="uniforms"
       :fragment-shader="fragmentShader"
