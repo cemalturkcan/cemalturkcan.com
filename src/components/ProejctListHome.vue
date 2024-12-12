@@ -53,6 +53,9 @@ const { projects } = defineProps<{
 }
 
 .project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
   margin-bottom: var(--spacing-12);
 }
 
