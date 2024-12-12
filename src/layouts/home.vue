@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ShaderContainer from '@/components/ShaderContainer.vue'
+import ShaderContainer from '@/components/core/ShaderContainer.vue'
 </script>
 
 <template>

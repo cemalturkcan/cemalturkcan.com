@@ -5,21 +5,21 @@
 <template>
   <nav>
     <ul>
+      <!--      <li> -->
+      <!--        <RouterLink -->
+      <!--          to="/projects" -->
+      <!--        > -->
+      <!--          <span>Projects</span> -->
+      <!--        </RouterLink> -->
+      <!--      </li> -->
       <li>
-        <RouterLink
-          to="/projects"
-        >
-          <span>Projects</span>
-        </RouterLink>
-      </li>
-      <li>
-        <RouterLink
-          to="/contact"
+        <a
+          href="mailto:cemalturkcann@gmail.com"
         >
           <span>
             Contact
           </span>
-        </RouterLink>
+        </a>
       </li>
     </ul>
   </nav>

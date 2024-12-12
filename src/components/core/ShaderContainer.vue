@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Shader from '@/components/Shader.vue'
+import Shader from '@/components/core/Shader.vue'
 </script>
 
 <template>

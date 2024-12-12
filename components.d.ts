@@ -7,13 +7,15 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Home: typeof import('./src/components/Home.vue')['default']
-    MarkdownWrapper: typeof import('./src/components/MarkdownWrapper.vue')['default']
-    NavBarHome: typeof import('./src/components/NavBarHome.vue')['default']
-    ProejctListHome: typeof import('./src/components/ProejctListHome.vue')['default']
+    Home: typeof import('./src/components/views/Home.vue')['default']
+    MarkdownWrapper: typeof import('./src/components/core/MarkdownWrapper.vue')['default']
+    NavBarHome: typeof import('./src/components/core/NavBarHome.vue')['default']
+    ProejctListHome: typeof import('./src/components/core/ProejctListHome.vue')['default']
+    Projects: typeof import('./src/components/Projects.vue')['default']
+    ProjectsPage: typeof import('./src/components/views/ProjectsPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Shader: typeof import('./src/components/Shader.vue')['default']
-    ShaderContainer: typeof import('./src/components/ShaderContainer.vue')['default']
+    Shader: typeof import('./src/components/core/Shader.vue')['default']
+    ShaderContainer: typeof import('./src/components/core/ShaderContainer.vue')['default']
   }
 }

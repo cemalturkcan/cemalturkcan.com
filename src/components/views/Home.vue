@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import NavBarHome from '@/components/NavBarHome.vue'
-import ProejctListHome from '@/components/ProejctListHome.vue'
-
 const { frontmatter } = defineProps({
   frontmatter: {
     type: Object,
@@ -11,31 +8,33 @@ const { frontmatter } = defineProps({
 </script>
 
 <template>
-  <div
-    class="left"
-  >
-    <section class="information">
-      <h1 class="name-surname">
-        {{ frontmatter.name }}
-        <span class="name-surname-divider">
-          {{ frontmatter.surname }}
-        </span>
-      </h1>
-      <div class="description">
-        <h2>
-          {{ frontmatter.personalTitle }}
-        </h2>
-        <p class="description">
-          {{ frontmatter.personalDescription }}
-        </p>
-        <p class="description">
-          {{ frontmatter.personalDescription2 }}
-        </p>
-      </div>
-    </section>
-    <NavBarHome />
+  <div class="content-detail">
+    <div
+      class="left"
+    >
+      <section class="information">
+        <h1 class="name-surname">
+          {{ frontmatter.name }}
+          <span class="name-surname-divider">
+            {{ frontmatter.surname }}
+          </span>
+        </h1>
+        <div class="description">
+          <h2>
+            {{ frontmatter.personalTitle }}
+          </h2>
+          <p class="description">
+            {{ frontmatter.personalDescription }}
+          </p>
+          <p class="description">
+            {{ frontmatter.personalDescription2 }}
+          </p>
+        </div>
+      </section>
+      <NavBarHome />
+    </div>
+    <ProejctListHome :projects="frontmatter.projects" />
   </div>
-  <ProejctListHome :projects="frontmatter.projects" />
 </template>
 
 <style>
@@ -114,10 +113,8 @@ h2 {
     justify-content: space-around;
   }
 }
-</style>
 
-<style>
-.content{
+.content-detail{
   display: grid;
   width: 100%;
   grid-template-columns: 2fr 1fr;
@@ -128,7 +125,7 @@ h2 {
 }
 
 @media (max-width: 1366px) {
-  .content{
+  .content-detail{
     padding: var(--spacing-12) var(--spacing-16);
     gap: var(--spacing-18);
   }
@@ -141,14 +138,14 @@ h2 {
 @media (max-width: 1024px) {
 }
 @media (max-width: 762px) {
-  .content{
+  .content-detail{
     grid-template-columns: 1fr 1fr;
     padding: var(--spacing-12) var(--spacing-6);
   }
 }
 
 @media (max-width: 550px) {
-  .content{
+  .content-detail{
     grid-template-columns: 1fr;
     grid-template-rows: 5fr 4fr;
     padding-bottom: 0;
