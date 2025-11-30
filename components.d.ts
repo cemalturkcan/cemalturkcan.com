@@ -11,7 +11,6 @@ declare module 'vue' {
     MarkdownWrapper: typeof import('./src/components/core/MarkdownWrapper.vue')['default']
     NavBarHome: typeof import('./src/components/core/NavBarHome.vue')['default']
     ProejctListHome: typeof import('./src/components/core/ProejctListHome.vue')['default']
-    Projects: typeof import('./src/components/Projects.vue')['default']
     ProjectsPage: typeof import('./src/components/views/ProjectsPage.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
