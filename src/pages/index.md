@@ -19,10 +19,10 @@ projects:
       description: Jan 2025 - Oct 2025 · 10 mos · Senior Full-Stack Developer
     - name: HAVOC Technology
       description: Oct 2023 - Present · Co-Founder
-    - name: VENHANCER
-      description: Jun 2023 - Oct 2023 · 5 mos · Full-stack Developer
     - name: CatchSoft
-      description: Nov 2021 - Sep 2024 · 3 yrs · Full-stack Developer
+      description: Nov 2021 - Oct 2024 · 3 yrs · Full-stack Developer
+    - name: VENHANCER
+      description: Jun 2023 - Feb 2024 · 9 mos · Full-stack Developer
     
 
 ---
