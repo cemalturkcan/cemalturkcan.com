@@ -21,11 +21,25 @@
           </span>
         </a>
       </li>
+      <li>
+        <a
+          href="/cv.pdf"
+          target="_blank"
+        >
+          <span>
+            CV
+          </span>
+        </a>
+      </li>
     </ul>
   </nav>
 </template>
 
 <style scoped>
+nav {
+  position: relative;
+  z-index: 1;
+}
 ul {
   display: flex;
   gap: var(--spacing-6);
