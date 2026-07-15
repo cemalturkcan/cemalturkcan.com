@@ -23,7 +23,7 @@
       </li>
       <li>
         <a
-          href="/cv.pdf"
+          href="/cemalturkcan.pdf"
           target="_blank"
         >
           <span>
