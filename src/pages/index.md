@@ -14,15 +14,15 @@ projects:
     - name: Nuevo Softwarehouse
       description: Apr 2026 - Present · Senior Software Engineer
     - name: Paymore
-      description: Oct 2025 - Apr 2026 · 7 mos · Senior Back-End Developer
+      description: Oct 2025 - Apr 2026 · 7 mos · Senior Software Engineer
     - name: Asthoria
-      description: Jan 2025 - Oct 2025 · 10 mos · Senior Full-Stack Developer
+      description: Jan 2025 - Oct 2025 · 10 mos · Senior Software Engineer
     - name: HAVOC Technology
-      description: Oct 2023 - Present · Co-Founder
+      description: Oct 2023 - Present · Co-Founder & Software Engineer
     - name: CatchSoft
-      description: Nov 2021 - Oct 2024 · 3 yrs · Full-stack Developer
+      description: Nov 2021 - Oct 2024 · 3 yrs · Software Engineer
     - name: VENHANCER
-      description: Jun 2023 - Feb 2024 · 9 mos · Full-stack Developer
+      description: Jun 2023 - Feb 2024 · 9 mos · Software Engineer
     
 
 ---
